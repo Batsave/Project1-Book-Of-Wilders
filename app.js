@@ -1,5 +1,4 @@
 
-
 function card() {
   const wildersListZone = document.querySelector("main.Wilders-Card-List");
 
@@ -56,7 +55,6 @@ function card() {
   // Add all to Body
   wildersListZone.appendChild(mainDiv);
 }
-
 
 for (let i = 0; i < 1; i++) {
   card();
