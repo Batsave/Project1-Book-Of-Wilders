@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    margin: 0 auto;
+}
+
+main.Wilders-Card-List {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 1rem;
+    justify-content: space-between;
+}

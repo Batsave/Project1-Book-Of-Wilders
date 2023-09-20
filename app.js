@@ -1,3 +1,4 @@
+const numberofitem = prompt("Combien d'éléments souhaitez vous afficher ?")
 
 function card() {
   const wildersListZone = document.querySelector("main.Wilders-Card-List");
@@ -31,18 +32,28 @@ function card() {
 
   const aboutText = document.createElement("a");
   aboutText.classList.add("card-about-text");
-  aboutText.textContent = "Become à front-end developer and make join a UI/UX designer school";
+  aboutText.textContent =
+    "Become à front-end developer and make join a UI/UX designer school";
   section2.appendChild(aboutText);
   mainDiv.appendChild(section2);
 
   // Social Link Section
   const linkSection = document.createElement("div");
   linkSection.classList.add("card-link-section");
-  const platforms = ["facebook", "x", "instagram", "linkedin", "github", "behance", "figma", "notion"];
+  const platforms = [
+    "facebook",
+    "x",
+    "instagram",
+    "linkedin",
+    "github",
+    "behance",
+    "figma",
+    "notion",
+  ];
   for (let platform of platforms) {
-      const link = document.createElement("a");
-      link.classList.add("link-logo", platform);
-      linkSection.appendChild(link);
+    const link = document.createElement("a");
+    link.classList.add("link-logo", platform);
+    linkSection.appendChild(link);
   }
   mainDiv.appendChild(linkSection);
 
@@ -56,6 +67,6 @@ function card() {
   wildersListZone.appendChild(mainDiv);
 }
 
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < numberofitem; i++) {
   card();
 }
