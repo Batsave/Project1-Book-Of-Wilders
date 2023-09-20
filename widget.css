@@ -1,0 +1,163 @@
+:root {
+    /*Card Settings*/
+    --card-bg-color: linear-gradient(120deg, rgba(21, 21, 21, 1) 0%, rgba(5, 5, 5, 1) 100%);
+    --card-brd-radius: 1rem;
+    --gap-section: 1.5rem;
+    /*Profil Picture Settings*/
+    --profil-pict-brd: Solid 0.2rem #eaeaea;
+    --profil-pict-bg: #eaeaea;
+
+    /*Text Settings*/
+    --font-familly: 'Archivo', sans-serif;
+    --font-color: #eaeaea;
+
+    /*Button Settings*/
+    --btn-bg-color: linear-gradient(120deg, rgba(234, 234, 234, 1) 0%, rgba(214, 214, 214, 1) 100%);
+    --btn-bg-color-hover: linear-gradient(120deg, rgba(200, 200, 200, 1) 0%, rgba(170, 170, 170, 1) 100%);
+
+    --btn-text-color: #101010;
+    --btn-brd-radius: 1rem;
+
+    /*Social Link Icons*/
+    --social-icons-size: 2.2rem;
+    --social-icons-size-hover: none;
+    --social-icons-gap: 0.5rem;
+}
+
+* {
+    transition: all 0.5s ease-in-out;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-content: center;
+    background: var(--card-bg-color);
+    border-radius: var(--card-brd-radius);
+    min-width: 250px;
+    max-width: 320px;
+    min-height: 100px;
+    padding: 1rem;
+    gap: var(--gap-section);
+}
+
+.profil-picture {
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    background-image: cover;
+    background-color: var(--profil-pict-bg);
+    border: var(--profil-pict-brd);
+    border-radius: 100%;
+    margin: auto;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 0.5rem;
+}
+
+.card-username {
+    font-family: var(--font-familly);
+    color: var(--font-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.card-about-title {
+    font-family: var(--font-familly);
+    color: var(--font-color);
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.card-about-text {
+    font-family: var(--font-familly);
+    color: var(--font-color);
+    font-weight: 200;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+
+
+.card-contact-button {
+    display: flex;
+    width: auto;
+    padding: 1rem;
+    justify-content: center;
+    background: var(--btn-bg-color);
+    border: none;
+    border-radius: var(--btn-brd-radius);
+    font-family: var(--font-familly);
+    color: var(--btn-text-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.card-contact-button:hover {
+
+    background: var(--btn-bg-color-hover);
+
+}
+
+.card-link-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+    gap: var(--social-icons-gap);
+}
+
+.link-logo {
+
+    width: var(--social-icons-size);
+    height: var(--social-icons-size);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+
+.link-logo:hover {
+    display: flex;
+}
+
+.facebook {
+    background-image: url(./src/social-icons/Facebook.svg);
+}
+
+.x {
+    background-image: url(./src/social-icons/X.svg);
+}
+
+.instagram {
+    background-image: url(./src/social-icons/Instagram.svg);
+}
+
+.linkedin {
+    background-image: url(./src/social-icons/LinkedIn.svg);
+}
+
+.github {
+    background-image: url(./src/social-icons/GitHub.svg);
+}
+
+.behance {
+    background-image: url(./src/social-icons/Behance.svg);
+}
+
+.figma {
+    background-image: url(./src/social-icons/Figma.svg);
+}
+
+.notion {
+    background-image: url(./src/social-icons/notion.svg);
+}
