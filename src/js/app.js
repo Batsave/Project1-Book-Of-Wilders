@@ -4,7 +4,7 @@ console.log(data);
 function cardTemplate(data, i) {
   return `
   <div class="card" id="${i}">
-            <img class="profil-picture" src="${data.photo}"/>
+            <img class="profil-picture" src="../../src/profil-pictures/${data.firstname}-${data.lastname}.jpg"/>
             <div class="card-section">
                 <a class="card-username" >${data.lastname} ${data.firstname}</a>
                 <a class="card-age" >${data.age}</a>
