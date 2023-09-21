@@ -410,28 +410,28 @@ class CardCarousel extends DraggingEvent {
 }
 
 slideRight() {
-  const temp = { ...this.xScale };
-  for (let x in this.xScale) {
-      const newX =
-        parseInt(x) - 1 < -this.centerIndex
-          ? this.centerIndex
-          : parseInt(x) - 1;
-      temp[newX] = this.xScale[x];
-  }
-  this.xScale = temp;
-  for (let x in temp) {
-      const scale = this.calcScale(x),
-            scale2 = this.calcScale2(x),
-            leftPos = this.calcPos(x, scale2),
-            zIndex = -Math.abs(x);
+    const temp = { ...this.xScale };
+    for (let x in this.xScale) {
+        const newX =
+          parseInt(x) - 1 < -this.centerIndex
+            ? this.centerIndex
+            : parseInt(x) - 1;
+        temp[newX] = this.xScale[x];
+    }
+    this.xScale = temp;
+    for (let x in temp) {
+        const scale = this.calcScale(x),
+              scale2 = this.calcScale2(x),
+              leftPos = this.calcPos(x, scale2),
+              zIndex = -Math.abs(x);
 
-      this.updateCards(this.xScale[x], {
-          x: x,
-          scale: scale,
-          leftPos: leftPos,
-          zIndex: zIndex,
-      });
-  }
+        this.updateCards(this.xScale[x], {
+            x: x,
+            scale: scale,
+            leftPos: leftPos,
+            zIndex: zIndex,
+        });
+    }
 }
 
 }
