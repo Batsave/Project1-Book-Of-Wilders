@@ -45,7 +45,6 @@ class DraggingEvent {
   event(callback) {
     let handler;
 
-    
     this.target.addEventListener("mousedown", (e) => {
       e.preventDefault();
 
@@ -67,6 +66,10 @@ class DraggingEvent {
       }
     });
 
+
+    
+        
+    
     this.target.addEventListener("touchstart", (e) => {
       handler = callback(e);
 
@@ -80,6 +83,8 @@ class DraggingEvent {
         window.removeEventListener("touchmove", handler);
         window.removeEventListener("touchend", clearDraggingEvent);
 
+
+        
         handler(null);
       }
     });
@@ -116,7 +121,8 @@ class DraggingEvent {
         }
       };
     }
-
+    
+    
     this.event(distanceInit);
   }
 }
@@ -145,13 +151,16 @@ class CardCarousel extends DraggingEvent {
         this.controller.bind(this)
       );
     }
-
+   
     // Initializers
     this.build();
-
+    
+    document.querySelector(".slide-left-button").addEventListener("click", this.slideLeft.bind(this));
+    document.querySelector(".slide-right-button").addEventListener("click", this.slideRight.bind(this));
     // Bind dragging event
     super.getDistance(this.moveCards.bind(this));
   }
+  
 
   updateCardWidth() {
     this.cardWidth =
@@ -160,6 +169,7 @@ class CardCarousel extends DraggingEvent {
     this.build();
   }
 
+  
   build(fix = 0) {
     for (let i = 0; i < this.cards.length; i++) {
       const x = i - this.centerIndex;
@@ -195,6 +205,8 @@ class CardCarousel extends DraggingEvent {
       }
     }
 
+
+    
     if (e.keyCode == 37) {
       // Right arrow
       for (let x in this.xScale) {
@@ -215,13 +227,16 @@ class CardCarousel extends DraggingEvent {
         leftPos = this.calcPos(x, scale2),
         zIndex = -Math.abs(x);
 
+       
       this.updateCards(this.xScale[x], {
         x: x,
         scale: scale,
         leftPos: leftPos,
         zIndex: zIndex,
+        
       });
     }
+    
   }
 
   calcPos(x, scale) {
@@ -241,8 +256,10 @@ class CardCarousel extends DraggingEvent {
       return formula;
     }
   }
-
   updateCards(card, data) {
+    
+    
+
     if (data.x || data.x == 0) {
       card.setAttribute("data-x", data.x);
     }
@@ -260,34 +277,43 @@ class CardCarousel extends DraggingEvent {
     if (data.leftPos) {
       card.style.left = `${data.leftPos}%`;
     }
-
+    if (data.zIndex || data.zIndex < 0) {
+      if (data.zIndex < 0) {
+        card.classList.add("card-blur");
+      } else {
+        card.classList.remove("card-blur");
+      }
+    }
     if (data.zIndex || data.zIndex == 0) {
       if (data.zIndex == 0) {
-        card.classList.add("highlight");
+          card.classList.add("highlight");
+          card.classList.remove("card-blur");
+      } else if (data.zIndex < 0) {
+          card.classList.add("card-blur");
       } else {
-        card.classList.remove("highlight");
+          card.classList.remove("card-blur");
       }
-
       card.style.zIndex = data.zIndex;
-    }
   }
+  }
+  
 
   calcScale2(x) {
     let formula;
-
+    
     if (x <= 0) {
-      formula = 1 - (-1 / 5) * x;
-
+      formula = 1 - (-1 / 3) * x;
+      
       return formula;
     } else if (x > 0) {
-      formula = 1 - (1 / 5) * x;
-
+      formula = 1 - (1 / 3) * x;
+      
       return formula;
     }
   }
 
   calcScale(x) {
-    const formula = 1 - (1 / 5) * Math.pow(x, 2);
+    const formula = 1 - (1 / 3) * Math.pow(x, 2);
 
     if (formula <= 0) {
       return 0;
@@ -329,7 +355,7 @@ class CardCarousel extends DraggingEvent {
 
     if (data != null) {
       this.container.classList.remove("smooth-return");
-      xDist = data.x / 250;
+      xDist = data.x / 300;
     } else {
       this.container.classList.add("smooth-return");
       xDist = 0;
@@ -358,6 +384,55 @@ class CardCarousel extends DraggingEvent {
       });
     }
   }
+  slideLeft() {
+    const temp = { ...this.xScale };
+    for (let x in this.xScale) {
+        const newX =
+          parseInt(x) + 1 > this.centerIndex
+            ? -this.centerIndex
+            : parseInt(x) + 1;
+        temp[newX] = this.xScale[x];
+    }
+    this.xScale = temp;
+    for (let x in temp) {
+        const scale = this.calcScale(x),
+              scale2 = this.calcScale2(x),
+              leftPos = this.calcPos(x, scale2),
+              zIndex = -Math.abs(x);
+
+        this.updateCards(this.xScale[x], {
+            x: x,
+            scale: scale,
+            leftPos: leftPos,
+            zIndex: zIndex,
+        });
+    }
 }
 
+slideRight() {
+  const temp = { ...this.xScale };
+  for (let x in this.xScale) {
+      const newX =
+        parseInt(x) - 1 < -this.centerIndex
+          ? this.centerIndex
+          : parseInt(x) - 1;
+      temp[newX] = this.xScale[x];
+  }
+  this.xScale = temp;
+  for (let x in temp) {
+      const scale = this.calcScale(x),
+            scale2 = this.calcScale2(x),
+            leftPos = this.calcPos(x, scale2),
+            zIndex = -Math.abs(x);
+
+      this.updateCards(this.xScale[x], {
+          x: x,
+          scale: scale,
+          leftPos: leftPos,
+          zIndex: zIndex,
+      });
+  }
+}
+
+}
 const carousel = new CardCarousel(cardsContainer);
