@@ -279,8 +279,10 @@ class CardCarousel extends DraggingEvent {
     }
     if (data.zIndex || data.zIndex < 0) {
       if (data.zIndex < 0) {
+        card.classList.remove("highlight");
         card.classList.add("card-blur");
       } else {
+        card.classList.add("highlight");
         card.classList.remove("card-blur");
       }
     }
@@ -289,8 +291,10 @@ class CardCarousel extends DraggingEvent {
           card.classList.add("highlight");
           card.classList.remove("card-blur");
       } else if (data.zIndex < 0) {
+        card.classList.remove("highlight");
           card.classList.add("card-blur");
       } else {
+        card.classList.remove("highlight");
           card.classList.remove("card-blur");
       }
       card.style.zIndex = data.zIndex;
