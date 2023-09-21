@@ -40,7 +40,7 @@
     padding: 1rem;
     gap: var(--gap-section);
     z-index: 1;
-    margin: calc(25vh) auto;
+    margin: auto;
     
     transition: filter .3s ease;
     position:absolute;
