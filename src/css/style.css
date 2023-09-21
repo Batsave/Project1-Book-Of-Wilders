@@ -11,11 +11,12 @@ body{
 main.Wilders-Card-List {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    overflow: hidden;
     gap: 1.5rem;
-    width: 80%;
+    width: 100%;
     height: auto;
     margin: auto;
     padding: 1rem;
     justify-content: space-between;
+    padding: 20px;
 }

@@ -28,18 +28,23 @@
     transition: all 0.2s ease-in-out;
 }
 
-.card-box {
+.card {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     align-content: center;
     background: var(--card-bg-color);
     border-radius: var(--card-brd-radius);
-    min-width: 250px;
+    min-width: 300px;
     max-width: 320px;
-    min-height: 100px;
+    min-height: 550px;
     padding: 1rem;
     gap: var(--gap-section);
+    z-index: 1;
+    margin: auto;
+    transition: filter .3s ease;
+    position: absolute;
+  
 }
 
 .profil-picture {
@@ -66,6 +71,13 @@
     color: var(--font-color);
     font-weight: 600;
     font-size: 1.4rem;
+    text-align: center;
+}
+.card-age {
+    font-family: var(--font-familly);
+    color: var(--font-color);
+    font-weight: 500;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -108,7 +120,7 @@
 .card-link-section {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 90%;
     margin: auto;
     gap: var(--social-icons-gap);
 }
@@ -128,33 +140,33 @@
 }
 
 .facebook {
-    background-image: url(./src/social-icons/Facebook.svg);
+    background-image: url(../../src/social-icons/Facebook.svg);
 }
 
 .x {
-    background-image: url(./src/social-icons/X.svg);
+    background-image: url(../../src/social-icons/X.svg);
 }
 
 .instagram {
-    background-image: url(./src/social-icons/Instagram.svg);
+    background-image: url(../../src/social-icons/Instagram.svg);
 }
 
 .linkedin {
-    background-image: url(./src/social-icons/LinkedIn.svg);
+    background-image: url(../../src/social-icons/LinkedIn.svg);
 }
 
 .github {
-    background-image: url(./src/social-icons/GitHub.svg);
+    background-image: url(../../src/social-icons/GitHub.svg);
 }
 
 .behance {
-    background-image: url(./src/social-icons/Behance.svg);
+    background-image: url(../../src/social-icons/Behance.svg);
 }
 
 .figma {
-    background-image: url(./src/social-icons/Figma.svg);
+    background-image: url(../../src/social-icons/Figma.svg);
 }
 
 .notion {
-    background-image: url(./src/social-icons/notion.svg);
+    background-image: url(../../src/social-icons/notion.svg);
 }
