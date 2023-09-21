@@ -34,9 +34,8 @@
     box-sizing: border-box;
     background: var(--card-bg-color);
     border-radius: var(--card-brd-radius);
-    min-width: 280px;
-    max-width: 320px;
-    min-height: 470px;
+    width: 300px;
+    min-height: 500px;
     padding: 1rem;
     gap: var(--gap-section);
     z-index: 1;
