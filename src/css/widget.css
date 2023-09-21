@@ -42,25 +42,30 @@
     margin: auto;
     transition: all .3s ease;
     position: absolute;
-  
+    box-shadow: none;
+
 }
+
 .card-blur {
     filter: blur(3px);
     transition: all 0.2s ease-in-out;
 }
+
 @keyframes boxshadow {
     0% {
-        box-shadow: 0px 0px 32px  #6343DE;
+        box-shadow: 0px 0px 32px #6343DE;
     }
+
     50% {
         box-shadow: 0px 0px 26px #6343DE;
     }
+
     100% {
         box-shadow: 0px 0px 32px #6343DE;
     }
 }
-    
-.highlight{
+
+.highlight {
     border: solid 2px #6343DE;
     transition: all 0.2s ease-in-out;
     animation: boxshadow 5s infinite;
@@ -94,6 +99,7 @@
     font-size: 1.4rem;
     text-align: center;
 }
+
 .card-age {
     font-family: var(--font-familly);
     color: var(--font-color);
@@ -157,7 +163,7 @@
 
 .link-logo:hover {
     display: flex;
-    filter:brightness(40%);
+    filter: brightness(40%);
 }
 
 .facebook {
