@@ -69,7 +69,7 @@ class DraggingEvent {
 
     
         
-    
+   /* 
     this.target.addEventListener("touchstart", (e) => {
       handler = callback(e);
 
@@ -87,7 +87,7 @@ class DraggingEvent {
         
         handler(null);
       }
-    });
+    });*/
   }
 
   
