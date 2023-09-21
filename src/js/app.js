@@ -44,7 +44,7 @@ class DraggingEvent {
 
   event(callback) {
     let handler;
-
+    /*
     this.target.addEventListener("mousedown", (e) => {
       e.preventDefault();
 
@@ -64,7 +64,7 @@ class DraggingEvent {
 
         handler(null);
       }
-    });
+    });*/
 
 
     
