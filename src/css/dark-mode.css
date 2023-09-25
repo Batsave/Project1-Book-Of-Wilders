@@ -1,0 +1,54 @@
+:root {
+    /*     Color Settings     */
+    --color-primary: var(--color-black);
+    --color-primary-hover: var(--color-black-light);
+    --color-secondary: var(--color-white);
+    --color-secondary-hover: var(--color-grey);
+
+    --color-black: #101010;
+    --color-black-light: #050505;
+    --color-white: #eaeaea;
+    --color-grey: #d9d9d9;
+    --color-purple: #5136B8;
+    --color-purple-light: #987DFF;
+
+
+
+
+
+
+    /*     Text Settings     */
+    --font-familly: 'Archivo', sans-serif;
+    --font-color: var(--color-secondary);   
+
+    /*     icon settings     */
+     --ico-invert-color: none;
+
+    /*     Page Settings   */
+    --color-background: var(--color-primary);
+    
+   
+
+
+
+    /*     Card Settings      */
+
+
+        /*Main Settings*/
+        --card-bg-color: linear-gradient(120deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+        --card-brd-radius: 1rem;
+        --gap-section: 1.5rem;  
+        --profil-pict-brd: Solid 0.2rem var(--color-secondary);
+    
+        /*Button Settings*/
+
+        --btn-bg-color: var(--color-secondary);
+        --btn-bg-color-hover: var(--color-secondary-hover);
+        --btn-text-color: var(--color-primary);
+        --btn-brd-radius: 1rem;
+
+        /*Social Link Icons*/
+        --social-icons-size: 2.2rem;
+        --social-icons-size-hover: none;
+        --social-icons-gap: 0.5rem;
+}
