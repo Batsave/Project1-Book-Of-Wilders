@@ -1,4 +1,4 @@
-import { data } from "../json/wilders.js";
+import { data } from "../data/wilders.js";
 console.log(data);
 
 function cardTemplate(data, i) {
