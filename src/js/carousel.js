@@ -1,31 +1,12 @@
-import { data } from "../data/wilders.js";
-console.log(data);
+import { data } from "../data/wilders_selected.js";
 
-function cardTemplate(data, i) {
-  return `
-  <div class="card" id="${i}">
-            <img class="profil-picture" src="../../src/profil-pictures/${data.firstname}-${data.lastname}.jpg"/>
-            <div class="card-section">
-                <a class="card-username" >${data.lastname} ${data.firstname}</a>
-                <a class="card-age" >${data.age}</a>
-            </div>
-            <div class="card-section">
-                <a class="card-about-title">Objective</a>
-                <a class="card-about-text">${data.objective}</a>
-            </div>
-            <div class=" card-link-section">
-                <a class="link-logo facebook" href="${data.facebook}"></a>
-                <a class="link-logo x"href="${data.twitter}"></a>
-                <a class="link-logo instagram"href="${data.instagram}"></a>
-                <a class="link-logo linkedin"href="${data.linkedin}"></a>
-                <a class="link-logo github"href="${data.github}"></a>
- 
-            </div>
-            <button class="card-contact-button">Contact this user</button>
-        </div> 
-  `;
-}
 
+//////////////// Import Card Template ////////////////
+
+import { cardTemplate } from "./card.js";
+
+
+//////////////// Create a loop to generate the cards ////////////////
 let htmlIntegration = "";
 
 for (let i = 0; i < data.length; i++) {
@@ -33,6 +14,16 @@ for (let i = 0; i < data.length; i++) {
 }
 const cardGenerate = document.getElementsByClassName("Wilders-Card-List");
 cardGenerate[0].innerHTML = htmlIntegration;
+
+
+
+
+window.onload = function() {
+  const carousel = new CardCarousel(cardsContainer);
+};
+
+
+//////////////// Create a Carousel ////////////////
 
 const cardsContainer = document.querySelector(".Wilders-Card-List");
 const cardsController = document.querySelector(".Wilders-Card-List");
@@ -42,54 +33,28 @@ class DraggingEvent {
     this.target = target;
   }
 
+  // Listen to the slide event and return the distance
+
   event(callback) {
     let handler;
-    /*
-    this.target.addEventListener("mousedown", (e) => {
-      e.preventDefault();
 
-      handler = callback(e);
-
-      window.addEventListener("mousemove", handler);
-
-      document.addEventListener("mouseleave", clearDraggingEvent);
-
-      window.addEventListener("mouseup", clearDraggingEvent);
-
-      function clearDraggingEvent() {
-        window.removeEventListener("mousemove", handler);
-        window.removeEventListener("mouseup", clearDraggingEvent);
-
-        document.removeEventListener("mouseleave", clearDraggingEvent);
-
-        handler(null);
-      }
-    });*/
-
-
-    
-        
-   /* 
+    // Touch Slide
     this.target.addEventListener("touchstart", (e) => {
       handler = callback(e);
-
       window.addEventListener("touchmove", handler);
-
       window.addEventListener("touchend", clearDraggingEvent);
-
       document.body.addEventListener("mouseleave", clearDraggingEvent);
 
       function clearDraggingEvent() {
         window.removeEventListener("touchmove", handler);
         window.removeEventListener("touchend", clearDraggingEvent);
-
-
-        
         handler(null);
       }
-    });*/
+    });
   }
 
+
+  // Get the distance between the start and the end of the slide
   
   getDistance(callback) {
     function distanceInit(e1) {
@@ -257,7 +222,9 @@ class CardCarousel extends DraggingEvent {
     }
   }
   updateCards(card, data) {
-    
+
+    //Add class for Position Absolute
+    card.classList.add("card-slidemode");
     
 
     if (data.x || data.x == 0) {
@@ -306,18 +273,18 @@ class CardCarousel extends DraggingEvent {
     let formula;
     
     if (x <= 0) {
-      formula = 1 - (-1 / 3) * x;
+      formula = 1 - (-1 / 2.5) * x;
       
       return formula;
     } else if (x > 0) {
-      formula = 1 - (1 / 3) * x;
+      formula = 1 - (1 / 2.5) * x;
       
       return formula;
     }
   }
 
   calcScale(x) {
-    const formula = 1 - (1 / 3) * Math.pow(x, 2);
+    const formula = 1 - (1 / 8) * Math.pow(x, 6);
 
     if (formula <= 0) {
       return 0;
@@ -388,6 +355,7 @@ class CardCarousel extends DraggingEvent {
       });
     }
   }
+
   slideLeft() {
     const temp = { ...this.xScale };
     for (let x in this.xScale) {
@@ -440,3 +408,4 @@ slideRight() {
 
 }
 const carousel = new CardCarousel(cardsContainer);
+
