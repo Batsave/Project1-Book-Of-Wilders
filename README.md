@@ -49,6 +49,8 @@ This site is a prototype exercise designed and developed by: [Batsave](https://g
 ## UI/UX Design
 ![Book Of Wilders - UI/UX Design](https://github.com/batsave/Project1-Book-Of-Wilders/blob/main/mockup/BookOfWilders-UIUXDesign.png?raw=true)
 ![Book Of Wilders - UI/UX Design](https://github.com/batsave/Project1-Book-Of-Wilders/blob/main/mockup/BookOfWilders-MobileOptimized.png?raw=true)
+![Book Of Wilders - UI/UX Design](https://github.com/batsave/Project1-Book-Of-Wilders/blob/main/mockup/BookOfWilders-Surimposed.png?raw=true)
+![Book Of Wilders - UI/UX Design](https://github.com/batsave/Project1-Book-Of-Wilders/blob/main/mockup/BookOfWilders-DarkAndLightMode.png?raw=true)
 ![Book Of Wilders - UI/UX Design](https://github.com/batsave/Project1-Book-Of-Wilders/blob/main/mockup/BookOfWilders-Colors.png?raw=true)
 <br>
 <br>
