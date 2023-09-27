@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book of Wilders</title>
@@ -10,7 +11,7 @@
     <link href="./src/css/style.css" rel="stylesheet">
     <link href="./src/css/theme.css" rel="stylesheet">
 
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
     </style>
@@ -18,25 +19,71 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Light/Dark Mode</h1>
-        <div class="toggle-container">
+
+    <nav>
+        <a class="logo"></a>
+        <div class="nav-btn-section">
+            <button class="searchBar"></button>
             <label><input type="checkbox" id="switch"></input></label>
         </div>
+    </nav>
 
-    </div>
-        
 
 
     <main class="Wilders-Card-List">
     </main>
 
-    
+    <footer>
+        <div class="svg-transition">
+            <svg version="1.1" viewBox="0 0 1664 138">
+                <style>
+                    .st1 {
+                        fill: var(--color-purple-light);
+                    }
+
+                    .st2 {
+                        fill: var(--color-purple);
+                    }
+                </style>
+                <path class="st1" d="M0,0l55.5,2c55.5,2,166.4,6,277.3,14.2c110.9,8.1,221.9,20.5,332.8,27.1C776.5,50,887.5,51,998.4,44.7
+                    c110.9-6.4,221.9-20,332.8-21c110.9-1,221.9,10.6,277.3,16.5L1664,46v92h-55.5c-55.5,0-166.4,0-277.3,0c-110.9,0-221.9,0-332.8,0
+                    c-110.9,0-221.9,0-332.8,0s-221.9,0-332.8,0s-221.9,0-277.3,0H0V0z" />
+                <path class="st2" d="M0,106l55.5-3.8c55.5-3.9,166.4-11.5,277.3-15.2s221.9-3.3,332.8-5.8s221.9-7.9,332.8-8.5
+                    c110.9-0.7,221.9,3.3,332.8,3.5c110.9,0.1,221.9-3.5,277.3-5.4L1664,69v69h-55.5c-55.5,0-166.4,0-277.3,0
+                    c-110.9,0-221.9,0-332.8,0c-110.9,0-221.9,0-332.8,0s-221.9,0-332.8,0s-221.9,0-277.3,0H0V106z" />
+            </svg>
+        </div>
+        <div class="suiteFooter">
+            <a class="logoFooter"></a>
+            <div class="footer-title-link-legal">
+                <ul>
+                    <li><a class="titlefoot">Legal</a></li>
+                    <li><a class="legalMention">Legal Mentions</a></li>
+                    <li><a class="privacyPolicy"></a>Privacy Policy</li>
+                    <li><a class="cookies">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer-title-link-dev">
+                <ul>
+                    <li><a class="titlefoot">Dev's</a></li>
+                    <li><a class="footerLink"></a>Sébatien</li>
+                    <li><a class="footerLink"></a>Souhir</li>
+                    <li><a class="footerLink"></a>Mehdi</li>
+                    <li><a class="footerLink"></a>Jonathan</li>
+                    <li><a class="footerLink"></a>Baptiste</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+<script src="./src/js/carousel.js" type="module"></script>
+<script src="./src/js/theme.js" type="module"></script>
 
 </body>
 
 </html>
 
-<script src="./src/js/carousel.js" type="module"></script>
-<script src="./src/js/theme.js" type="module"></script>
-  
+
