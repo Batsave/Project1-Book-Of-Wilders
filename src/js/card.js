@@ -1,6 +1,6 @@
 export function cardTemplate(data) {
-  return `
-      <div class="card">
+    return `
+      <div class="card" id="${data.lastname}-${data.firstname}">
                 <img class="profil-picture" src="./src/profil-pictures/${data.firstname}-${data.lastname}.jpg"/>
                 <div class="card-section">
                     <a class="card-username">${data.lastname} ${data.firstname}</a>

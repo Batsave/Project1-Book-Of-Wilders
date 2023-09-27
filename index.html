@@ -9,7 +9,9 @@
     <link href="./src/css/card.css" rel="stylesheet">
     <link href="./src/css/dark-mode.css" rel="stylesheet">
     <link href="./src/css/style.css" rel="stylesheet">
+    <link href="./src/css/search.css" rel="stylesheet">
     <link href="./src/css/theme.css" rel="stylesheet">
+
 
 
     <style>
@@ -23,10 +25,11 @@
     <nav>
         <a class="logo"></a>
         <div class="nav-btn-section">
-            <button class="searchBar"></button>
+            <button class="searchBar opensearchPopUp"></button>
             <label><input type="checkbox" id="switch"></input></label>
         </div>
     </nav>
+
 
 
 
@@ -79,11 +82,26 @@
     </footer>
 
 
+
+
+    <div class="popup-container">
+        <div id="headpopup">Look for someone ?</div>
+        <hr class="underline">
+        </hr>
+        <div class="container">
+            <input class="search-input" type="text" id="searchInput" placeholder="Search your Wilder" />
+            <div class="btn-container">
+                <button class="btn-close">Close</button>
+                <button class="btn-search">Search</button>
+            </div>
+        </div>
+        <div id="suggestions"></div>
+    </div>
+
 <script src="./src/js/carousel.js" type="module"></script>
 <script src="./src/js/theme.js" type="module"></script>
+<script src="./src/js/search.js" type="module"></script>
+
 
 </body>
-
 </html>
-
-
