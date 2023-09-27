@@ -18,7 +18,7 @@ cardGenerate[0].innerHTML = htmlIntegration;
 
 
 
-window.onload = function () {
+window.onload = function() {
   const carousel = new CardCarousel(cardsContainer);
 };
 
@@ -55,7 +55,7 @@ class DraggingEvent {
 
 
   // Get the distance between the start and the end of the slide
-
+  
   getDistance(callback) {
     function distanceInit(e1) {
       let startingX, startingY;
@@ -86,8 +86,8 @@ class DraggingEvent {
         }
       };
     }
-
-
+    
+    
     this.event(distanceInit);
   }
 }
@@ -116,16 +116,16 @@ class CardCarousel extends DraggingEvent {
         this.controller.bind(this)
       );
     }
-
+   
     // Initializers
     this.build();
-
+    
     document.querySelector(".slide-left-button").addEventListener("click", this.slideLeft.bind(this));
     document.querySelector(".slide-right-button").addEventListener("click", this.slideRight.bind(this));
     // Bind dragging event
     super.getDistance(this.moveCards.bind(this));
   }
-
+  
 
   updateCardWidth() {
     this.cardWidth =
@@ -134,7 +134,7 @@ class CardCarousel extends DraggingEvent {
     this.build();
   }
 
-
+  
   build(fix = 0) {
     for (let i = 0; i < this.cards.length; i++) {
       const x = i - this.centerIndex;
@@ -171,7 +171,7 @@ class CardCarousel extends DraggingEvent {
     }
 
 
-
+    
     if (e.keyCode == 37) {
       // Right arrow
       for (let x in this.xScale) {
@@ -192,16 +192,16 @@ class CardCarousel extends DraggingEvent {
         leftPos = this.calcPos(x, scale2),
         zIndex = -Math.abs(x);
 
-
+       
       this.updateCards(this.xScale[x], {
         x: x,
         scale: scale,
         leftPos: leftPos,
         zIndex: zIndex,
-
+        
       });
     }
-
+    
   }
 
   calcPos(x, scale) {
@@ -225,7 +225,7 @@ class CardCarousel extends DraggingEvent {
 
     //Add class for Position Absolute
     card.classList.add("card-slidemode");
-
+    
 
     if (data.x || data.x == 0) {
       card.setAttribute("data-x", data.x);
@@ -255,30 +255,30 @@ class CardCarousel extends DraggingEvent {
     }
     if (data.zIndex || data.zIndex == 0) {
       if (data.zIndex == 0) {
-        card.classList.add("highlight");
-        card.classList.remove("card-blur");
+          card.classList.add("highlight");
+          card.classList.remove("card-blur");
       } else if (data.zIndex < 0) {
         card.classList.remove("highlight");
-        card.classList.add("card-blur");
+          card.classList.add("card-blur");
       } else {
         card.classList.remove("highlight");
-        card.classList.remove("card-blur");
+          card.classList.remove("card-blur");
       }
       card.style.zIndex = data.zIndex;
-    }
   }
-
+  }
+  
 
   calcScale2(x) {
     let formula;
-
+    
     if (x <= 0) {
       formula = 1 - (-1 / 2.5) * x;
-
+      
       return formula;
     } else if (x > 0) {
       formula = 1 - (1 / 2.5) * x;
-
+      
       return formula;
     }
   }
@@ -341,10 +341,10 @@ class CardCarousel extends DraggingEvent {
 
     for (let i = 0; i < this.cards.length; i++) {
       const x = this.checkOrdering(
-        this.cards[i],
-        parseInt(this.cards[i].dataset.x),
-        xDist
-      ),
+          this.cards[i],
+          parseInt(this.cards[i].dataset.x),
+          xDist
+        ),
         scale = this.calcScale(x + xDist),
         scale2 = this.calcScale2(x + xDist),
         leftPos = this.calcPos(x + xDist, scale2);
@@ -359,52 +359,52 @@ class CardCarousel extends DraggingEvent {
   slideLeft() {
     const temp = { ...this.xScale };
     for (let x in this.xScale) {
-      const newX =
-        parseInt(x) + 1 > this.centerIndex
-          ? -this.centerIndex
-          : parseInt(x) + 1;
-      temp[newX] = this.xScale[x];
+        const newX =
+          parseInt(x) + 1 > this.centerIndex
+            ? -this.centerIndex
+            : parseInt(x) + 1;
+        temp[newX] = this.xScale[x];
     }
     this.xScale = temp;
     for (let x in temp) {
-      const scale = this.calcScale(x),
-        scale2 = this.calcScale2(x),
-        leftPos = this.calcPos(x, scale2),
-        zIndex = -Math.abs(x);
+        const scale = this.calcScale(x),
+              scale2 = this.calcScale2(x),
+              leftPos = this.calcPos(x, scale2),
+              zIndex = -Math.abs(x);
 
-      this.updateCards(this.xScale[x], {
-        x: x,
-        scale: scale,
-        leftPos: leftPos,
-        zIndex: zIndex,
-      });
+        this.updateCards(this.xScale[x], {
+            x: x,
+            scale: scale,
+            leftPos: leftPos,
+            zIndex: zIndex,
+        });
     }
-  }
+}
 
-  slideRight() {
+slideRight() {
     const temp = { ...this.xScale };
     for (let x in this.xScale) {
-      const newX =
-        parseInt(x) - 1 < -this.centerIndex
-          ? this.centerIndex
-          : parseInt(x) - 1;
-      temp[newX] = this.xScale[x];
+        const newX =
+          parseInt(x) - 1 < -this.centerIndex
+            ? this.centerIndex
+            : parseInt(x) - 1;
+        temp[newX] = this.xScale[x];
     }
     this.xScale = temp;
     for (let x in temp) {
-      const scale = this.calcScale(x),
-        scale2 = this.calcScale2(x),
-        leftPos = this.calcPos(x, scale2),
-        zIndex = -Math.abs(x);
+        const scale = this.calcScale(x),
+              scale2 = this.calcScale2(x),
+              leftPos = this.calcPos(x, scale2),
+              zIndex = -Math.abs(x);
 
-      this.updateCards(this.xScale[x], {
-        x: x,
-        scale: scale,
-        leftPos: leftPos,
-        zIndex: zIndex,
-      });
+        this.updateCards(this.xScale[x], {
+            x: x,
+            scale: scale,
+            leftPos: leftPos,
+            zIndex: zIndex,
+        });
     }
-  }
+}
 
 }
 const carousel = new CardCarousel(cardsContainer);

@@ -1,0 +1,27 @@
+.slide-right-button{
+    background: url('../svg/right-arrow.svg') no-repeat center; 
+}
+.slide-left-button{
+    background: url('../svg/left-arrow.svg') no-repeat center; 
+}
+
+@media screen and (min-width: 700px) {
+    .button-slide {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+    }
+    .button-slide:hover {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 699px) {
+    .button-slide {
+        display: none;
+    }
+}
+  
+    
+

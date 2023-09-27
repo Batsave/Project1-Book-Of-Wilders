@@ -14,13 +14,13 @@ const openPopup = document.querySelector(".opensearchPopUp");
 openPopup.addEventListener("click", openSearch);
 
 function openSearch() {
-    const popup = document.getElementsByClassName("popup-container")[0];
+    const popup = document.getElementsByClassName("popup")[0];
     popup.style.display = "flex";
 }
 
 
 function closeSearch() {
-    const popup = document.getElementsByClassName("popup-container")[0];
+    const popup = document.getElementsByClassName("popup")[0];
     popup.style.display = "none";
 }
 
@@ -43,11 +43,7 @@ function performSearch() {
     resultat.forEach((resultItem) => {
         const fullName = `${resultItem.firstname} ${resultItem.lastname}`;
 
-        suggestions += `
-        <div class="suggestion">
-            <a href="#${resultItem.lastname}-${resultItem.firstname}"> ${fullName}</a>
-        </div>
-        `;
+        suggestions += `<a class="WilderResult" href="#${resultItem.lastname}-${resultItem.firstname}"> ${fullName}</a>`;
     });
 
     searchResults.innerHTML = suggestions;
