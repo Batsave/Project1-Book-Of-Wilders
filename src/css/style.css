@@ -1,17 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
+
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     background-color: #101010;
     display: flex;
     margin: auto;
     justify-content: center;
-    
+
 }
 
 section {
@@ -22,6 +22,7 @@ section {
     width: 100%;
     margin: auto;
 }
+
 .button-slide {
     display: flex;
     width: auto;
