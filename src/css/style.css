@@ -8,6 +8,7 @@
 ::-webkit-scrollbar {
     width: 0;
     display: none;
+    overflow-y: hidden;
 }
 
 body {
@@ -151,8 +152,6 @@ header {
     margin: auto;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .button-slide {
@@ -162,13 +161,12 @@ header {
     filter: var(--ico-invert-color);
 }
 
-.Wilders-Card-List {
+.wilders-carrousel {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
 }
 
 /* About Section */

@@ -1,4 +1,4 @@
-import { data } from "../data/wilders.js";
+import { data } from "../data/selectedwilders.js";
 
 //////////////// Import Card Template ////////////////
 
@@ -10,8 +10,9 @@ let htmlIntegration = "";
 for (let i = 0; i < data.length; i++) {
   htmlIntegration += cardTemplate(data[i], i);
 }
-const cardGenerate = document.getElementsByClassName("Wilders-Card-List");
+const cardGenerate = document.getElementsByClassName("wilders-carrousel");
 cardGenerate[0].innerHTML = htmlIntegration;
+
 
 window.onload = function () {
   const carousel = new CardCarousel(cardsContainer);
@@ -19,8 +20,8 @@ window.onload = function () {
 
 //////////////// Create a Carousel ////////////////
 
-const cardsContainer = document.querySelector(".Wilders-Card-List");
-const cardsController = document.querySelector(".Wilders-Card-List");
+const cardsContainer = document.querySelector(".wilders-carrousel");
+const cardsController = document.querySelector(".wilders-carrousel");
 
 class DraggingEvent {
   constructor(target = undefined) {
@@ -35,13 +36,23 @@ class DraggingEvent {
     // Touch Slide
     this.target.addEventListener("touchstart", (e) => {
       handler = callback(e);
-      window.addEventListener("touchmove", handler);
-      window.addEventListener("touchend", clearDraggingEvent);
-      document.body.addEventListener("mouseleave", clearDraggingEvent);
+      documents
+        .querySelector(".wilders-carrousel")
+        .addEventListener("touchmove", handler);
+      documents
+        .querySelector(".wilders-carrousel")
+        .addEventListener("touchend", clearDraggingEvent);
+      documents
+        .querySelector(".wilders-carrousel")
+        .addEventListener("mouseleave", clearDraggingEvent);
 
       function clearDraggingEvent() {
-        window.removeEventListener("touchmove", handler);
-        window.removeEventListener("touchend", clearDraggingEvent);
+        documents
+          .querySelector(".wilders-carrousel")
+          .removeEventListener("touchmove", handler);
+        documents
+          .querySelector(".wilders-carrousel")
+          .removeEventListener("touchend", clearDraggingEvent);
         handler(null);
       }
     });
@@ -122,6 +133,7 @@ class CardCarousel extends DraggingEvent {
     super.getDistance(this.moveCards.bind(this));
   }
 
+
   updateCardWidth() {
     this.cardWidth =
       (this.cards[0].offsetWidth / this.container.offsetWidth) * 100;
@@ -189,6 +201,7 @@ class CardCarousel extends DraggingEvent {
         scale: scale,
         leftPos: leftPos,
         zIndex: zIndex,
+
       });
     }
   }
@@ -213,6 +226,7 @@ class CardCarousel extends DraggingEvent {
   updateCards(card, data) {
     //Add class for Position Absolute
     card.classList.add("card-slidemode");
+
 
     if (data.x || data.x == 0) {
       card.setAttribute("data-x", data.x);
@@ -255,15 +269,18 @@ class CardCarousel extends DraggingEvent {
     }
   }
 
+
   calcScale2(x) {
     let formula;
 
     if (x <= 0) {
+
       formula = 1 - (-1 / 3.5) * x;
 
       return formula;
     } else if (x > 0) {
       formula = 1 - (1 / 3.5) * x;
+
 
       return formula;
     }
@@ -327,10 +344,10 @@ class CardCarousel extends DraggingEvent {
 
     for (let i = 0; i < this.cards.length; i++) {
       const x = this.checkOrdering(
-          this.cards[i],
-          parseInt(this.cards[i].dataset.x),
-          xDist
-        ),
+        this.cards[i],
+        parseInt(this.cards[i].dataset.x),
+        xDist
+      ),
         scale = this.calcScale(x + xDist),
         scale2 = this.calcScale2(x + xDist),
         leftPos = this.calcPos(x + xDist, scale2);
