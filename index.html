@@ -10,7 +10,17 @@
     <link href="./src/css/dark-mode.css" rel="stylesheet">
     <link href="./src/css/style.css" rel="stylesheet">
 
-    
+    <link href="./src/css/swich.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
     </style>
@@ -19,18 +29,33 @@
 
 <body>
 
-        
+
+
+
+    <div class="container">
+        <div class="top">
+            <div class="toggle-btn">
+                <span style="margin: 0.8em;">Swipe</span>
+                <label class="switch">
+                    <input type="checkbox" id="checbox" onclick="check()" ; />
+                    <span class="slider round"></span>
+                </label>
+                <span style="margin: 0.8em;">Liste</span>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <main class="Wilders-Card-List">
     </main>
 
-    
+
 
 </body>
 
 </html>
 
 <script src="./src/js/carousel.js" type="module"></script>
-
-  
+<script src="./src/js/swich.js" type="module"></script>
