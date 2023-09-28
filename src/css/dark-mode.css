@@ -23,6 +23,8 @@
 
     /*     icon settings     */
     --ico-invert-color: none;
+    --ico-theme-std: url(../svg/colormode/Dark.svg);
+    --ico-theme-hover: url(../svg/colormode/Dark-hover.svg);
 
     /*     Page Settings   */
     --color-background: var(--color-primary);

@@ -68,11 +68,12 @@ nav {
     background-size: contain;
     cursor: pointer;
     filter: none;
+    transform: scale(0.9);
 }
 
 .lightdarkmode {
     display: flex;
-    background: url(../svg/colormode/Dark.svg);
+    background: var(--ico-theme-std);
     background-repeat: no-repeat;
     background-size: contain;
     width: 2.2rem;
@@ -88,11 +89,12 @@ nav {
 }
 
 .lightdarkmode:hover {
-    background: url(../svg/colormode/Hover.svg);
+    background: var(--ico-theme-hover);
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
     filter: none;
+    transform: scale(0.9);
 }
 
 /* Titles settings */
