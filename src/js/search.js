@@ -1,8 +1,7 @@
-import { data } from "../data/wilders.js";
+import { data } from "../data/allwilders.js";
 
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("suggestions");
-const searchButton = document.getElementsByClassName("btn-search");
 
 const closePopup = document.querySelector(".btn-close");
 closePopup.addEventListener("click", closeSearch);

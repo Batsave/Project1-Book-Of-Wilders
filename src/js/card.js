@@ -18,7 +18,7 @@ export function cardTemplate(data) {
                     <a class="link-logo github"href="${data.github}" title="Acceder au Profil GitHub de ${data.lastname} ${data.firstname}"></a>
                 </div>
                 
-                <button class="card-contact-button" title="Contacter ${data.lastname} ${data.firstname}"><a href="mailto:${data.mail}">Contacter</a></button>
+                <button onClick="location.href='mailto:${data.mail}'" class="card-contact-button" title="Contacter ${data.lastname} ${data.firstname}">Contacter</button>
                 
               </div> 
       `;
@@ -44,7 +44,7 @@ export function allCard(data) {
                     <a class="link-logo github"href="${data.github}" title="Acceder au Profil GitHub de ${data.lastname} ${data.firstname}"></a>
                 </div>
                 
-                <button class="card-contact-button" title="Contacter ${data.lastname} ${data.firstname}"><a href="mailto:${data.mail}">Contacter</a></button>
+                <button onClick="location.href='mailto:${data.mail}'" class="card-contact-button" title="Contacter ${data.lastname} ${data.firstname}">Contacter</button>
                 
               </div> 
       `;

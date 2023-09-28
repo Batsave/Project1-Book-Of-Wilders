@@ -1,5 +1,8 @@
 /*  Card Settings   */
-
+:any-link {
+    text-decoration: none;
+    text-decoration-color: none;
+}
 
 
 .card:hover {
@@ -112,8 +115,11 @@
     font-size: 1.2rem;
 }
 
+
+
 .card-contact-button:hover {
     background: var(--btn-bg-color-hover);
+    transform: scale(0.9);
 }
 
 .card-link-section {
@@ -135,6 +141,7 @@
 
 .link-logo:hover {
     display: flex;
+    transform: scale(0.9);
     filter: brightness(40%);
 }
 
