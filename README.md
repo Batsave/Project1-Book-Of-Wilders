@@ -54,6 +54,7 @@ This site is a prototype exercise designed and developed by: [Batsave](https://g
 ![Book Of Wilders - Dark and Light Mode](https://github.com/batsave/Project1-Book-Of-Wilders/blob/main/mockup/BookOfWilders-DarkAndLightMode.png?raw=true)
 ![Book Of Wilders - Fold Friendly](https://github.com/batsave/Project1-Book-Of-Wilders/blob/main/mockup/BookOfWilders-PhoneMockup.png?raw=true)
 ![Book Of Wilders - Fold Friendly](https://github.com/batsave/Project1-Book-Of-Wilders/blob/main/mockup/BookOfWilders-Welcome.png?raw=true)
+
 <br>
 <br>
 <br>
