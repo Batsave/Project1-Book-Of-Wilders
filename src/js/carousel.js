@@ -1,32 +1,27 @@
-import { data } from "../data/wilders_selected.js";
-
+import { data } from "../data/selectedwilders.js";
 
 //////////////// Import Card Template ////////////////
 
 import { cardTemplate } from "./card.js";
 
-
 //////////////// Create a loop to generate the cards ////////////////
 let htmlIntegration = "";
 
 for (let i = 0; i < data.length; i++) {
-  htmlIntegration = htmlIntegration + cardTemplate(data[i], i);
+  htmlIntegration += cardTemplate(data[i], i);
 }
-const cardGenerate = document.getElementsByClassName("Wilders-Card-List");
+const cardGenerate = document.getElementsByClassName("wilders-carrousel");
 cardGenerate[0].innerHTML = htmlIntegration;
-
-
 
 
 window.onload = function () {
   const carousel = new CardCarousel(cardsContainer);
 };
 
-
 //////////////// Create a Carousel ////////////////
 
-const cardsContainer = document.querySelector(".Wilders-Card-List");
-const cardsController = document.querySelector(".Wilders-Card-List");
+const cardsContainer = document.querySelector(".wilders-carrousel");
+const cardsController = document.querySelector(".wilders-carrousel");
 
 class DraggingEvent {
   constructor(target = undefined) {
@@ -41,18 +36,27 @@ class DraggingEvent {
     // Touch Slide
     this.target.addEventListener("touchstart", (e) => {
       handler = callback(e);
-      window.addEventListener("touchmove", handler);
-      window.addEventListener("touchend", clearDraggingEvent);
-      document.body.addEventListener("mouseleave", clearDraggingEvent);
+      documents
+        .querySelector(".wilders-carrousel")
+        .addEventListener("touchmove", handler);
+      documents
+        .querySelector(".wilders-carrousel")
+        .addEventListener("touchend", clearDraggingEvent);
+      documents
+        .querySelector(".wilders-carrousel")
+        .addEventListener("mouseleave", clearDraggingEvent);
 
       function clearDraggingEvent() {
-        window.removeEventListener("touchmove", handler);
-        window.removeEventListener("touchend", clearDraggingEvent);
+        documents
+          .querySelector(".wilders-carrousel")
+          .removeEventListener("touchmove", handler);
+        documents
+          .querySelector(".wilders-carrousel")
+          .removeEventListener("touchend", clearDraggingEvent);
         handler(null);
       }
     });
   }
-
 
   // Get the distance between the start and the end of the slide
 
@@ -87,7 +91,6 @@ class DraggingEvent {
       };
     }
 
-
     this.event(distanceInit);
   }
 }
@@ -120,8 +123,12 @@ class CardCarousel extends DraggingEvent {
     // Initializers
     this.build();
 
-    document.querySelector(".slide-left-button").addEventListener("click", this.slideLeft.bind(this));
-    document.querySelector(".slide-right-button").addEventListener("click", this.slideRight.bind(this));
+    document
+      .querySelector(".slide-left-button")
+      .addEventListener("click", this.slideLeft.bind(this));
+    document
+      .querySelector(".slide-right-button")
+      .addEventListener("click", this.slideRight.bind(this));
     // Bind dragging event
     super.getDistance(this.moveCards.bind(this));
   }
@@ -133,7 +140,6 @@ class CardCarousel extends DraggingEvent {
 
     this.build();
   }
-
 
   build(fix = 0) {
     for (let i = 0; i < this.cards.length; i++) {
@@ -170,8 +176,6 @@ class CardCarousel extends DraggingEvent {
       }
     }
 
-
-
     if (e.keyCode == 37) {
       // Right arrow
       for (let x in this.xScale) {
@@ -192,7 +196,6 @@ class CardCarousel extends DraggingEvent {
         leftPos = this.calcPos(x, scale2),
         zIndex = -Math.abs(x);
 
-
       this.updateCards(this.xScale[x], {
         x: x,
         scale: scale,
@@ -201,7 +204,6 @@ class CardCarousel extends DraggingEvent {
 
       });
     }
-
   }
 
   calcPos(x, scale) {
@@ -222,7 +224,6 @@ class CardCarousel extends DraggingEvent {
     }
   }
   updateCards(card, data) {
-
     //Add class for Position Absolute
     card.classList.add("card-slidemode");
 
@@ -273,11 +274,13 @@ class CardCarousel extends DraggingEvent {
     let formula;
 
     if (x <= 0) {
-      formula = 1 - (-1 / 2.5) * x;
+
+      formula = 1 - (-1 / 3.5) * x;
 
       return formula;
     } else if (x > 0) {
-      formula = 1 - (1 / 2.5) * x;
+      formula = 1 - (1 / 3.5) * x;
+
 
       return formula;
     }
@@ -405,7 +408,5 @@ class CardCarousel extends DraggingEvent {
       });
     }
   }
-
 }
 const carousel = new CardCarousel(cardsContainer);
-

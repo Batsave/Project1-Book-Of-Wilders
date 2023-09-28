@@ -1,48 +1,256 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
+    transition: all 0.2s ease-in-out;
 }
 
-body{
+
+::-webkit-scrollbar {
+    width: 0;
+    display: none;
+    overflow-y: hidden;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    background-color: #101010;
-    display: flex;
-    margin: auto;
-    justify-content: center;
+    background-color: var(--color-background);
     
 }
 
-section {
+/* navbar*/
+nav {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10rem;
-    width: 100%;
-    margin: auto;
-}
-.button-slide {
-    display: flex;
-    width: auto;
-    padding: 1rem;
-    justify-content: center;
-    border: none;
-    border-radius: var(--btn-brd-radius);
-    font-family: var(--font-familly);
-    color: var(--btn-text-color);
-    font-weight: 500;
-    font-size: 1rem;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 1.6rem;
+    box-sizing: border-box;
+    
 }
 
-main.Wilders-Card-List {
+.logo {
+    display: flex;
+    background: url(../svg/logo-bookofwilders.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10rem;
+    filter: var(--ico-invert-color);
+    
+}
+
+.nav-btn-section {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 100%;
-    height: 580px;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.searchBar {
+    display: flex;
+    background: url(../svg/searchbutton.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    border: none;
+    filter: var(--ico-invert-color);
+    transition: none;
+}
+
+
+.searchBar:hover {
+    background: url(../svg/searchbuttonhover.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    filter: none;
+}
+
+.lightdarkmode {
+    display: flex;
+    background: url(../svg/colormode/Dark.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    border: none;
+    filter: var(--ico-invert-color);
+    transition: none;
+}
+
+.lightdarkmode input {
+    display: none;
+}
+
+.lightdarkmode:hover {
+    background: url(../svg/colormode/Hover.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    filter: none;
+}
+
+/* Titles settings */
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
     margin: auto;
-    padding-top: 40px;
+    font-family: var(--font-familly);
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.title-separate {
+    display: flex;
+    width: 80%;
+    border: solid 0.15rem var(--color-purple);
+    margin: auto;
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+
+
+
+/* Carrousel settings */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+    gap: 3rem;
+    box-sizing: border-box;
+}
+
+.selectedwilders {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-slide {
+    display: flex;
+    padding: 1rem;
+    border: none;
+    filter: var(--ico-invert-color);
+}
+
+.wilders-carrousel {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; 
+}
+
+
+
+/* Footer Section */
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.transition {
+    display: flex;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    background-color: var(--color-purple);
+    padding-bottom: 10rem ;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    min-width: 200px;
+    max-width: 300px;
+    content: url(/src/svg/logo-bookofwilders.svg);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    min-width: 260px;
+    max-width: 320px;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-column-title {
+    display: flex;
+    color: var(--color-white);
+    font-family: var(--font-familly);
+    font-weight: 600;
+    font-size: 1.2em;
+    padding-bottom: 20px;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.footer-about-text {
+    display: flex;
+    font-family: var(--font-familly);
+    color: var(--color-white);
+    text-align: left;
+    font-weight: 300;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-column-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerlinks {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+    font-family: var(--font-familly);
+    text-align: left;
+    font-weight: 300;
+    font-size: 1rem;
+    padding-top: 10px;
+    text-decoration: none;
+    list-style-type: none;
 }

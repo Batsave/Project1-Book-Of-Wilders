@@ -1,0 +1,73 @@
+export const data = [
+    {
+      mail: "baptiste.save79700@gmail.com",
+      lastname: "SAVE",
+      firstname: "Baptiste",
+      age: 24,
+      objective:
+        "Devenir développeur Front-End avec possibilité de formation UI/UX Designer",
+      hobbies: "UI/UX Design / Créateur de contenu",
+      citation: "Je sais que je ne sais rien - Socrate",
+      facebook: "https://facebook.com/Baptiste.Save.79",
+      twitter: "https://twitter.com/batsave",
+      instagram: "https://instagram.com/batsave__",
+      linkedin: "https://linkedin.com/in/baptiste-save/",
+      github: "https://github.com/Batsave",
+    },
+    {
+      mail: "anthony.gorski@wildcodeschool.com",
+      lastname: "GORSKI",
+      firstname: "Anthony",
+      age: 31,
+      objective: "Être comme Benoît ❤️",
+      hobbies: "Échecs, Manga",
+      citation: "Je rigole !",
+      facebook: "#",
+      twitter: "https://twitter.com/Gorski_anthony",
+      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/anthony-gorski/",
+      github: "https://github.com/GorskiAnthony",
+    },
+    {
+      mail: "samuel.faber.1985@gmail.com",
+      lastname: "FABER",
+      firstname: "Samuel",
+      age: 38,
+      objective: "Devenir le Roi des pirates en trouvant le One Piece ! 🏴‍☠️",
+      hobbies: "Pêche 🎣",
+      citation:
+        "C'est tout ce que ça te fait quand je te dis qu'on va manger des chips ?",
+      facebook: "Nope",
+      twitter: "Nope",
+      instagram: "Nope",
+      linkedin: "Je te laisse chercher je suis sur mon téléphone 😜",
+      github: "Pareil 🤣",
+    },
+    {
+      mail: "sebastien-lacour@hotmail.com",
+      lastname: "LACOUR",
+      firstname: "Sébastien",
+      age: 37,
+      objective: "gonfleur de roue de train",
+      hobbies: "torturer mes enfants",
+      citation: "c'est pas faux",
+      github: "https://github.com/sebztz",
+    },
+    {
+      mail: "mehdi.m_86@hotmail.fr",
+      lastname: "MEHEMEL",
+      firstname: "Mehdi",
+      age: 37,
+      objective:
+        "Mon projet est de me spécialiser dans la cybersécurité par la suite en poursuivant avec une formation d'Administrateur d'infrastructures sécurisées en alternance avec la Wild Code School",
+      hobbies: "Lecture; sport (crossfit); voyages",
+      citation:
+        "Ce que l'on fait dans sa vie, résonne dans l'éternité (Maximus dans Gladiator)",
+      facebook: "https://www.facebook.com/mehdiarmando",
+      twitter: "https://twitter.com/Mehdiarmando",
+      instagram: "https://www.instagram.com/mehdi_meh86/",
+      linkedin: "https://www.linkedin.com/in/mehdi-mehemel-bb5238a4/",
+      github: "https://www.instagram.com/mehdi_meh86/",
+    }
+  ];
+  

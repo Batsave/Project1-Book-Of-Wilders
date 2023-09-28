@@ -180,9 +180,11 @@
 
 /*  Background Cards Settings   */
 
-@media screen and (min-width: 400px){
+@media screen and (min-width: 300px){
     .card-blur {
     filter: blur(3px);
+    --moz-filter: blur(3px);
+    --webkit-filter: blur(3px);
     }
     .card {
         display: flex;
@@ -190,6 +192,7 @@
         box-sizing: border-box;
         background: var(--card-bg-color);
         border-radius: var(--card-brd-radius);
+        
         width: 300px;
         min-height: 500px;
         padding: 1rem;
@@ -201,18 +204,20 @@
     
     }
 }
-@media screen and (max-width: 399px){
+@media screen and (max-width: 299px){
     .card-blur {
-    display: none;
-    }
+        filter: blur(3px);
+        --moz-filter: blur(3px);
+        --webkit-filter: blur(3px);
+        }
+       
     .card {
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
         background: var(--card-bg-color);
         border-radius: var(--card-brd-radius);
-        min-width: 270px;
-        max-width: 300px;
+        width: 240px;
         min-height: 500px;
         padding: 1rem;
         gap: var(--gap-section);
@@ -220,7 +225,6 @@
         transition: all 0.3s ease-in-out;
         box-shadow: none;
         border: solid 1px #6343DE;
-    
     }
 }
 
