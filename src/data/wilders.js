@@ -156,7 +156,7 @@ export const data = [
     {
       mail: "sebastien-lacour@hotmail.com",
       lastname: "LACOUR",
-      firstname: "sébastien",
+      firstname: "Sébastien",
       age: 37,
       objective: "gonfleur de roue de train",
       hobbies: "torturer mes enfants",
