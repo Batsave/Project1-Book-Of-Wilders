@@ -7,7 +7,7 @@ export function cardTemplate(data) {
                     <a class="card-age">${data.age}</a>
                 </div>
                 <div class="card-section">
-                    <a class="card-about-title">Objective</a>
+                    <a class="card-about-title">Objectifs</a>
                     <a class="card-about-text">${data.objective}</a>
                 </div>
                 <div class=" card-link-section">

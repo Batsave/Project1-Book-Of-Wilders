@@ -227,6 +227,18 @@ ul {
     list-style: none;
 }
 
+
+.footer-about-text {
+    display: flex;
+    font-family: var(--font-familly);
+    color: var(--color-white);
+    text-align: left;
+    font-weight: 300;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
 .footer-column-links {
     display: flex;
     flex-direction: column;
