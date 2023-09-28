@@ -1,5 +1,3 @@
-DirectoryIndex accueil.html
-RewriteEngine on
 
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
