@@ -14,11 +14,15 @@ const cardGenerate = document.getElementsByClassName("wilders-carrousel");
 cardGenerate[0].innerHTML = htmlIntegration;
 
 
+
+
+//////////////// Create a Carousel ////////////////
+
 window.onload = function () {
   const carousel = new CardCarousel(cardsContainer);
 };
 
-//////////////// Create a Carousel ////////////////
+
 
 const cardsContainer = document.querySelector(".wilders-carrousel");
 const cardsController = document.querySelector(".wilders-carrousel");

@@ -13,7 +13,3 @@ for (let i = 0; i < data.length; i++) {
 }
 const cardGenerate = document.getElementsByClassName("all-wilders-list");
 cardGenerate[0].innerHTML = htmlIntegration;
-
-window.onload = function () {
-  const carousel = new CardCarousel(cardsContainer);
-};

@@ -245,15 +245,5 @@ export const data = [
       linkedin: "https://www.linkedin.com/in/mehdi-mehemel-bb5238a4/",
       github: "https://www.instagram.com/mehdi_meh86/",
     },
-    {
-      mail: "",
-      lastname: "DOE",
-      firstname: "John",
-      age: 40,
-      objective: "Non communiqué",
-      hobbies: "",
-      citation:
-        "Ce que l'on fait dans sa vie, résonne dans l'éternité (Maximus dans Gladiator)",
-    },
   ];
   
