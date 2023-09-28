@@ -13,6 +13,7 @@ for (let i = 0; i < data.length; i++) {
 const cardGenerate = document.getElementsByClassName("wilders-carrousel");
 cardGenerate[0].innerHTML = htmlIntegration;
 
+
 window.onload = function () {
   const carousel = new CardCarousel(cardsContainer);
 };
@@ -132,6 +133,7 @@ class CardCarousel extends DraggingEvent {
     super.getDistance(this.moveCards.bind(this));
   }
 
+
   updateCardWidth() {
     this.cardWidth =
       (this.cards[0].offsetWidth / this.container.offsetWidth) * 100;
@@ -199,6 +201,7 @@ class CardCarousel extends DraggingEvent {
         scale: scale,
         leftPos: leftPos,
         zIndex: zIndex,
+
       });
     }
   }
@@ -223,6 +226,7 @@ class CardCarousel extends DraggingEvent {
   updateCards(card, data) {
     //Add class for Position Absolute
     card.classList.add("card-slidemode");
+
 
     if (data.x || data.x == 0) {
       card.setAttribute("data-x", data.x);
@@ -265,15 +269,18 @@ class CardCarousel extends DraggingEvent {
     }
   }
 
+
   calcScale2(x) {
     let formula;
 
     if (x <= 0) {
+
       formula = 1 - (-1 / 3.5) * x;
 
       return formula;
     } else if (x > 0) {
       formula = 1 - (1 / 3.5) * x;
+
 
       return formula;
     }
@@ -337,10 +344,10 @@ class CardCarousel extends DraggingEvent {
 
     for (let i = 0; i < this.cards.length; i++) {
       const x = this.checkOrdering(
-          this.cards[i],
-          parseInt(this.cards[i].dataset.x),
-          xDist
-        ),
+        this.cards[i],
+        parseInt(this.cards[i].dataset.x),
+        xDist
+      ),
         scale = this.calcScale(x + xDist),
         scale2 = this.calcScale2(x + xDist),
         leftPos = this.calcPos(x + xDist, scale2);
