@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--color-background);
-    
+
 }
 
 /* navbar*/
@@ -24,7 +24,7 @@ nav {
     height: fit-content;
     padding: 1.6rem;
     box-sizing: border-box;
-    
+
 }
 
 .logo {
@@ -34,7 +34,7 @@ nav {
     background-size: contain;
     width: 10rem;
     filter: var(--ico-invert-color);
-    
+
 }
 
 .nav-btn-section {
@@ -151,7 +151,7 @@ header {
     margin: auto;
     justify-content: center;
     align-items: center;
-    
+
 
 }
 
@@ -168,9 +168,66 @@ header {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    
+
 }
 
+/* About Section */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--color-purple);
+}
+
+.aboutPicture {
+    display: flex;
+    background-image: url(/src/webp/about-picture.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    width: 45%;
+    height: auto;
+}
+
+.aboutText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: var(--font-familly);
+    color: var(--color-white);
+    padding: 2rem;
+    width: 65ch;
+    gap: 2rem;
+}
+
+
+
+
+.all-wilders-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    margin: 3rem auto 3rem;
+    justify-content: center;
+}
+
+.all-wilder-list {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: auto;
+    overflow: auto;
+}
 
 
 /* Footer Section */
@@ -180,7 +237,7 @@ footer {
     flex-direction: column;
 }
 
-.transition {
+.svg-transition {
     display: flex;
 }
 
@@ -190,7 +247,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: var(--color-purple);
-    padding-bottom: 10rem ;
+    padding-bottom: 10rem;
     gap: 3rem;
     padding: 3rem;
 }
