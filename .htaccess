@@ -1,0 +1,16 @@
+DirectoryIndex accueil.html
+RewriteEngine on
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://www.bookofwilders.fr/$1 [R=301,L]
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^bookofwilders.fr 
+RewriteRule (.*) https://www.bookofwilders.fr/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
