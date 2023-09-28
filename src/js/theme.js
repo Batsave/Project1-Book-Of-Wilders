@@ -16,15 +16,3 @@ document.addEventListener("change", function(event) {
     } 
   
   });
-
-/*const checkbox = document.querySelector('#switch');
-
-        checkbox.addEventListener('click', function() {
-            if(this.checked) {
-                document.Element.setAttribute('data-theme', 'dark')
-            } else {
-                document.Element.setAttribute('data-theme', 'light')
-            }
-        })*/
-
-        

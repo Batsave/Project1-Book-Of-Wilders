@@ -1,4 +1,4 @@
-import { data } from "../data/wilders.js";
+import { data } from "../data/selectedwilders.js";
 
 //////////////// Import Card Template ////////////////
 
@@ -10,7 +10,7 @@ let htmlIntegration = "";
 for (let i = 0; i < data.length; i++) {
   htmlIntegration += cardTemplate(data[i], i);
 }
-const cardGenerate = document.getElementsByClassName("Wilders-Card-List");
+const cardGenerate = document.getElementsByClassName("wilders-carrousel");
 cardGenerate[0].innerHTML = htmlIntegration;
 
 window.onload = function () {
@@ -19,8 +19,8 @@ window.onload = function () {
 
 //////////////// Create a Carousel ////////////////
 
-const cardsContainer = document.querySelector(".Wilders-Card-List");
-const cardsController = document.querySelector(".Wilders-Card-List");
+const cardsContainer = document.querySelector(".wilders-carrousel");
+const cardsController = document.querySelector(".wilders-carrousel");
 
 class DraggingEvent {
   constructor(target = undefined) {
@@ -35,13 +35,23 @@ class DraggingEvent {
     // Touch Slide
     this.target.addEventListener("touchstart", (e) => {
       handler = callback(e);
-      window.addEventListener("touchmove", handler);
-      window.addEventListener("touchend", clearDraggingEvent);
-      document.body.addEventListener("mouseleave", clearDraggingEvent);
+      documents
+        .querySelector(".wilders-carrousel")
+        .addEventListener("touchmove", handler);
+      documents
+        .querySelector(".wilders-carrousel")
+        .addEventListener("touchend", clearDraggingEvent);
+      documents
+        .querySelector(".wilders-carrousel")
+        .addEventListener("mouseleave", clearDraggingEvent);
 
       function clearDraggingEvent() {
-        window.removeEventListener("touchmove", handler);
-        window.removeEventListener("touchend", clearDraggingEvent);
+        documents
+          .querySelector(".wilders-carrousel")
+          .removeEventListener("touchmove", handler);
+        documents
+          .querySelector(".wilders-carrousel")
+          .removeEventListener("touchend", clearDraggingEvent);
         handler(null);
       }
     });
