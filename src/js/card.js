@@ -3,12 +3,12 @@ export function cardTemplate(data) {
       <div class="card">
                 <a alt="Photo de profil de ${data.lastname} ${data.firstname}" class="profil-picture" style=" background-image:url('./src/profil-pictures/${data.firstname}-${data.lastname}-min.webp')"></a>
                 <div class="card-section">
-                    <a class="card-username">${data.lastname} ${data.firstname}</a>
-                    <a class="card-age">${data.age}</a>
+                    <p class="card-username">${data.lastname} ${data.firstname}</p>
+                    <p class="card-age">${data.age}</p>
                 </div>
                 <div class="card-section">
-                    <a class="card-about-title">Objectifs</a>
-                    <a class="card-about-text">${data.objective}</a>
+                    <p class="card-about-title">Objectifs</p>
+                    <p class="card-about-text">${data.objective}</p>
                 </div>
                 <div class=" card-link-section">
                     <a class="link-logo facebook" href="${data.facebook}" title="Acceder au profil Facebook de ${data.lastname} ${data.firstname}"></a>
@@ -29,12 +29,12 @@ export function allCard(data) {
       <div class="card" id="${data.lastname}-${data.firstname}">
       <a alt="Photo de profil de ${data.lastname} ${data.firstname}" class="profil-picture" style=" background-image:url('./src/profil-pictures/${data.firstname}-${data.lastname}-min.webp')"></a>
                 <div class="card-section">
-                    <a class="card-username">${data.lastname} ${data.firstname}</a>
-                    <a class="card-age">${data.age}</a>
+                    <p class="card-username">${data.lastname} ${data.firstname}</p>
+                    <p class="card-age">${data.age}</p>
                 </div>
                 <div class="card-section">
-                    <a class="card-about-title">Objectifs</a>
-                    <a class="card-about-text">${data.objective}</a>
+                    <p class="card-about-title">Objectifs</p>
+                    <p class="card-about-text">${data.objective}</p>
                 </div>
                 <div class=" card-link-section">
                     <a class="link-logo facebook" href="${data.facebook}" title="Acceder au profil Facebook de ${data.lastname} ${data.firstname}"></a>
