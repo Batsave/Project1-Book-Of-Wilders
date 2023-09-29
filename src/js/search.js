@@ -56,6 +56,11 @@ function performSearch() {
     if (input === '') {
         searchResults.innerHTML = '';
     }
+    document.querySelectorAll('.WilderResult').forEach(link => {
+        link.addEventListener('click', () => {
+            closeSearch();
+        });
+    });
 
 }
 
