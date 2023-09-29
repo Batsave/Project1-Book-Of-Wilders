@@ -12,6 +12,12 @@ searchBtn.addEventListener("click", performSearch);
 const openPopup = document.querySelector(".opensearchPopUp");
 openPopup.addEventListener("click", openSearch);
 
+searchInput.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+        performSearch();
+    }
+})
+
 function openSearch() {
     const popup = document.getElementsByClassName("popup")[0];
     popup.style.display = "flex";
