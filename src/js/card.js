@@ -11,11 +11,11 @@ export function cardTemplate(data) {
                     <p class="card-about-text">${data.objective}</p>
                 </div>
                 <div class=" card-link-section">
-                    <a class="link-logo facebook" href="${data.facebook}" title="Acceder au profil Facebook de ${data.lastname} ${data.firstname}"></a>
-                    <a class="link-logo x"href="${data.twitter}" title="Acceder au profil Twitter de ${data.lastname} ${data.firstname}"></a>
-                    <a class="link-logo instagram"href="${data.instagram}" title="Acceder au profil Instagram de ${data.lastname} ${data.firstname}"></a>
-                    <a class="link-logo linkedin"href="${data.linkedin}" title="Acceder au profil LinkedIn de ${data.lastname} ${data.firstname}"></a>
-                    <a class="link-logo github"href="${data.github}" title="Acceder au Profil GitHub de ${data.lastname} ${data.firstname}"></a>
+                ${data.facebook ? `<a class="link-logo facebook" href="${data.facebook}" title="Acceder au profil Facebook de ${data.lastname} ${data.firstname}"></a>` : ''}
+                ${data.twitter ? `<a class="link-logo x" href="${data.twitter}" title="Acceder au profil Twitter de ${data.lastname} ${data.firstname}"></a>` : ''}
+                ${data.instagram ? `<a class="link-logo instagram" href="${data.instagram}" title="Acceder au profil Instagram de ${data.lastname} ${data.firstname}"></a>` : ''}
+                ${data.linkedin ? `<a class="link-logo linkedin" href="${data.linkedin}" title="Acceder au profil LinkedIn de ${data.lastname} ${data.firstname}"></a>` : ''}
+                ${data.github ? `<a class="link-logo github" href="${data.github}" title="Acceder au Profil GitHub de ${data.lastname} ${data.firstname}"></a>` : ''}
                 </div>
                 
                 <button onClick="location.href='mailto:${data.mail}'" class="card-contact-button" title="Contacter ${data.lastname} ${data.firstname}">Contacter</button>
@@ -37,11 +37,11 @@ export function allCard(data) {
                     <p class="card-about-text">${data.objective}</p>
                 </div>
                 <div class=" card-link-section">
-                    <a class="link-logo facebook" href="${data.facebook}" title="Acceder au profil Facebook de ${data.lastname} ${data.firstname}"></a>
-                    <a class="link-logo x"href="${data.twitter}" title="Acceder au profil Twitter de ${data.lastname} ${data.firstname}"></a>
-                    <a class="link-logo instagram"href="${data.instagram}" title="Acceder au profil Instagram de ${data.lastname} ${data.firstname}"></a>
-                    <a class="link-logo linkedin"href="${data.linkedin}" title="Acceder au profil LinkedIn de ${data.lastname} ${data.firstname}"></a>
-                    <a class="link-logo github"href="${data.github}" title="Acceder au Profil GitHub de ${data.lastname} ${data.firstname}"></a>
+                ${data.facebook ? `<a class="link-logo facebook" href="${data.facebook}" title="Acceder au profil Facebook de ${data.lastname} ${data.firstname}"></a>` : ''}
+                ${data.twitter ? `<a class="link-logo x" href="${data.twitter}" title="Acceder au profil Twitter de ${data.lastname} ${data.firstname}"></a>` : ''}
+                ${data.instagram ? `<a class="link-logo instagram" href="${data.instagram}" title="Acceder au profil Instagram de ${data.lastname} ${data.firstname}"></a>` : ''}
+                ${data.linkedin ? `<a class="link-logo linkedin" href="${data.linkedin}" title="Acceder au profil LinkedIn de ${data.lastname} ${data.firstname}"></a>` : ''}
+                ${data.github ? `<a class="link-logo github" href="${data.github}" title="Acceder au Profil GitHub de ${data.lastname} ${data.firstname}"></a>` : ''}
                 </div>
                 
                 <button onClick="location.href='mailto:${data.mail}'" class="card-contact-button" title="Contacter ${data.lastname} ${data.firstname}">Contacter</button>
