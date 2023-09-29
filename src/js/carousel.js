@@ -29,27 +29,23 @@ const cardsController = document.querySelector(".wilders-carrousel");
 
 class DraggingEvent {
   constructor(target = undefined) {
-    this.target = target;
+      this.target = target;
   }
-
-  // Listen to the slide event and return the distance
-
   event(callback) {
-    let handler;
+      let handler;
 
-    // Touch Slide
-    this.target.addEventListener("touchstart", (e) => {
-      handler = callback(e);
-      window.addEventListener("touchmove", handler);
-        window.addEventListener("touchend", clearDraggingEvent);
-        window.addEventListener("mouseleave", clearDraggingEvent);
+      this.target.addEventListener("touchstart", (e) => {
+          handler = callback(e);
+          window.addEventListener("touchmove", handler, { passive: true });
+          window.addEventListener("touchend", clearDraggingEvent, { passive: true });
+          window.addEventListener("mouseleave", clearDraggingEvent, { passive: true });
 
-      function clearDraggingEvent() {
-        window.removeEventListener("touchmove", handler);
-          window.removeEventListener("touchend", clearDraggingEvent);
-        handler(null);
-      }
-    });
+          function clearDraggingEvent() {
+              window.removeEventListener("touchmove", handler);
+              window.removeEventListener("touchend", clearDraggingEvent);
+              handler(null);
+          }
+      }, { passive: true });
   }
 
   // Get the distance between the start and the end of the slide

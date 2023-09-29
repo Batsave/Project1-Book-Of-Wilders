@@ -362,7 +362,7 @@ ul {
     text-align: left;
     font-weight: 300;
     font-size: 1rem;
-    padding-top: 10px;
+    padding: 0.8rem;
     text-decoration: none;
     list-style-type: none;
 }

@@ -12,3 +12,18 @@ RewriteRule ^ /%1 [NC,L,R]
 
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+
+## EXPIRES CACHING ##
+ <IfModule mod_expires.c>
+ ExpiresActive On
+ ExpiresByType image/webp "access plus 1 year"
+ ExpiresByType image/svg "access plus 1 year"
+ ExpiresByType image/png "access plus 1 year"
+ ExpiresByType text/css "access plus 1 month"
+ ExpiresByType text/x-javascript "access plus 1 month"
+ ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ ExpiresByType image/x-icon "access plus 1 year"
+ ExpiresDefault "access plus 7 days"
+ </IfModule>
+ ## EXPIRES CACHING ##
