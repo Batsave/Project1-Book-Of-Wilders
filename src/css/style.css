@@ -38,7 +38,10 @@ nav {
     background-size: contain;
     width: 10rem;
     filter: var(--ico-invert-color);
+}
 
+.logo:hover {
+    transform: scale(0.9);
 }
 
 .nav-btn-section {
@@ -312,6 +315,10 @@ footer {
     min-width: 200px;
     max-width: 300px;
     content: url(/src/svg/logo-bookofwilders.svg);
+    
+}
+.footer-logo:hover {
+    transform: scale(0.9);
 }
 
 .footer-column {
