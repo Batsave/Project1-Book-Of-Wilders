@@ -15,20 +15,6 @@ export const data = [
       github: "https://github.com/Batsave",
     },
     {
-      mail: "anthony.gorski@wildcodeschool.com",
-      lastname: "GORSKI",
-      firstname: "Anthony",
-      age: 31,
-      objective: "Être comme Benoît ❤️",
-      hobbies: "Échecs, Manga",
-      citation: "Je rigole !",
-      facebook: "#",
-      twitter: "https://twitter.com/Gorski_anthony",
-      instagram: "#",
-      linkedin: "https://www.linkedin.com/in/anthony-gorski/",
-      github: "https://github.com/GorskiAnthony",
-    },
-    {
       mail: "samuel.faber.1985@gmail.com",
       lastname: "FABER",
       firstname: "Samuel",
@@ -54,6 +40,20 @@ export const data = [
       github: "https://github.com/sebztz",
     },
     {
+      mail: "anthony.gorski@wildcodeschool.com",
+      lastname: "GORSKI",
+      firstname: "Anthony",
+      age: 31,
+      objective: "Être comme Benoît ❤️",
+      hobbies: "Échecs, Manga",
+      citation: "Je rigole !",
+      facebook: "#",
+      twitter: "https://twitter.com/Gorski_anthony",
+      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/anthony-gorski/",
+      github: "https://github.com/GorskiAnthony",
+    },
+    {
       mail: "mehdi.m_86@hotmail.fr",
       lastname: "MEHEMEL",
       firstname: "Mehdi",
@@ -68,6 +68,29 @@ export const data = [
       instagram: "https://www.instagram.com/mehdi_meh86/",
       linkedin: "https://www.linkedin.com/in/mehdi-mehemel-bb5238a4/",
       github: "https://www.instagram.com/mehdi_meh86/",
-    }
+    },
+    {
+      mail: "johnnyboy59000@gmail.com",
+      lastname: "BERNARD",
+      firstname: "Jonathan",
+      age: 34,
+      objective: "Dev' des trucs",
+      hobbies: "Jeux vidéo et bière",
+      citation: "L'éternité c'est long, surtout vers la fin.",
+      facebook: "https:\/\/www.facebook.com\/jonathan.bernard.75",
+      instagram: "https:\/\/www.instagram.com\/johnnyboy_tchoutchou\/",
+      linkedin: "https:\/\/www.linkedin.com\/in\/jonathan-bernard-250733290\/",
+      github: "https:\/\/github.com\/Jonathan-Bernard"
+     },
+     {
+      mail: "lah.oceane@gmail.com",
+      lastname: "LAHOUAL",
+      firstname: "Océane",
+      age: 27,
+    objective: "Devenir Déesse de la magie",
+      hobbies: "Jeux-vidéos, musique, sport, dessin, animes\/mangas",
+      linkedin: "https:\/\/www.linkedin.com\/in\/oc%C3%A9ane-l-b6312618a\/",
+      github: "https:\/\/github.com\/Midunighto"
+     },
   ];
   
