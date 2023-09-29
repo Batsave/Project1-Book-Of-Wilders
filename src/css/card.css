@@ -38,7 +38,6 @@
     width: 8rem;
     height: 8rem;
     background-color: var(--profil-pict-bg);
-    background: url('../profil-pictures/none.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -52,7 +51,6 @@
     width: 8rem;
     height: 8rem;
     background-color: var(--profil-pict-bg);
-    background: url('../profil-pictures/none.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

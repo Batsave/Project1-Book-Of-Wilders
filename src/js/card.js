@@ -1,7 +1,7 @@
 export function cardTemplate(data) {
     return `
       <div class="card">
-                <img alt="Photo de profil de ${data.lastname} ${data.firstname}" class="profil-picture" src="./src/profil-pictures/${data.firstname}-${data.lastname}-min.webp"/>
+                <a alt="Photo de profil de ${data.lastname} ${data.firstname}" class="profil-picture" style=" background-image:url('./src/profil-pictures/${data.firstname}-${data.lastname}-min.webp')"></a>
                 <div class="card-section">
                     <a class="card-username">${data.lastname} ${data.firstname}</a>
                     <a class="card-age">${data.age}</a>
@@ -27,7 +27,7 @@ export function cardTemplate(data) {
 export function allCard(data) {
     return `
       <div class="card" id="${data.lastname}-${data.firstname}">
-                <img alt="Photo de profil de ${data.lastname} ${data.firstname}" class="profil-picture" src="./src/profil-pictures/${data.firstname}-${data.lastname}-min.webp"/>
+      <a alt="Photo de profil de ${data.lastname} ${data.firstname}" class="profil-picture" style=" background-image:url('./src/profil-pictures/${data.firstname}-${data.lastname}-min.webp')"></a>
                 <div class="card-section">
                     <a class="card-username">${data.lastname} ${data.firstname}</a>
                     <a class="card-age">${data.age}</a>
