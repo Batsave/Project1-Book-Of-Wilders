@@ -40,23 +40,13 @@ class DraggingEvent {
     // Touch Slide
     this.target.addEventListener("touchstart", (e) => {
       handler = callback(e);
-      documents
-        .querySelector(".wilders-carrousel")
-        .addEventListener("touchmove", handler);
-      documents
-        .querySelector(".wilders-carrousel")
-        .addEventListener("touchend", clearDraggingEvent);
-      documents
-        .querySelector(".wilders-carrousel")
-        .addEventListener("mouseleave", clearDraggingEvent);
+      window.addEventListener("touchmove", handler);
+        window.addEventListener("touchend", clearDraggingEvent);
+        window.addEventListener("mouseleave", clearDraggingEvent);
 
       function clearDraggingEvent() {
-        documents
-          .querySelector(".wilders-carrousel")
-          .removeEventListener("touchmove", handler);
-        documents
-          .querySelector(".wilders-carrousel")
-          .removeEventListener("touchend", clearDraggingEvent);
+        window.removeEventListener("touchmove", handler);
+          window.removeEventListener("touchend", clearDraggingEvent);
         handler(null);
       }
     });

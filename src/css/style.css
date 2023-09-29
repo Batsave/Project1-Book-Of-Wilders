@@ -10,7 +10,7 @@
 ::-webkit-scrollbar {
     width: 0;
     display: none;
-    overflow-y: hidden;
+    
 }
 
 body {
