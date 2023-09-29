@@ -86,7 +86,9 @@ export const data = [
    "age": 38,
    "objective": "Devenir le Roi des pirates en trouvant le One Piece ! 🏴‍☠️",
    "hobbies": "Pêche 🎣",
-   "citation": "C'est tout ce que ça te fait quand je te dis qu'on va manger des chips ?"
+   "citation": "C'est tout ce que ça te fait quand je te dis qu'on va manger des chips ?",
+   "linkedin": "https://www.linkedin.com/in/samuelfaberdev/",
+    "github": "https://github.com/samuelfaberdev"
   },
   {
    "mail": "diogo596@hotmail.fr",
