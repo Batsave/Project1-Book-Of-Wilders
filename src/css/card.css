@@ -123,8 +123,7 @@
 
 .card-link-section {
     display: flex;
-    flex-wrap: wrap;
-    width: 90%;
+    max-width: 90%;
     margin: auto;
     gap: var(--social-icons-gap);
 }
