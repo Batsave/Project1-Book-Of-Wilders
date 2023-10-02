@@ -26,7 +26,7 @@ export function cardTemplate(data) {
 
 export function allCard(data) {
     return `
-      <div class="card" id="${data.lastname}-${data.firstname}">
+      <div class="card" id="${data.lastname}">
       <div alt="Photo de profil de ${data.lastname} ${data.firstname}" class="profil-picture" style=" background-image:url('./src/profil-pictures/${data.firstname}-${data.lastname}-min.webp')"></div>
                 <div class="card-section">
                     <p class="card-username">${data.lastname} ${data.firstname}</p>

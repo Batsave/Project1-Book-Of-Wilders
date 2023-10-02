@@ -197,7 +197,7 @@
         box-sizing: border-box;
         background: var(--card-bg-color);
         border-radius: var(--card-brd-radius);
-        
+        border: solid 1px #6343DE;
         width: 300px;
         min-height: 500px;
         padding: 1rem;
@@ -205,7 +205,7 @@
         margin: auto;
         transition: all 0.3s ease-in-out;
         box-shadow: none;
-        border: solid 1px #6343DE;
+       
     
     }
 }

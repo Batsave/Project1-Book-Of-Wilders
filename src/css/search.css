@@ -23,32 +23,23 @@
     gap: 1rem;
     margin: 2rem auto 10rem;
     width: 80%;
-    
+    justify-content: center;
     height: fit-content;
-   
-    
-    
+ 
   }
   
   .WilderResult {
     display: flex;
     flex-direction: column;
     font-family: var(--font-familly);
-    color: var(--color-primary);
+    color: var(--color-white);
     font-size: 1rem;
     justify-content: center;
     text-decoration: none;
-    padding: 1rem;
-    background-color: var(--color-secondary);
     height: fit-content;
     margin: 0 auto;
     border-radius: 0.8rem;
     
-  }
-  
-  .WilderResult:hover {
-    background-color: var(--color-purple);
-    color: var(--color-white);
   }
   
   .btn-close {
@@ -113,3 +104,22 @@
     background-color: var(--color-secondary-hover);
     color: var(--color-primary-hover);
   }
+
+  .resultbox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 220px;
+    padding: 1rem;
+    background: var(--card-bg-color);
+    border-radius: var(--card-brd-radius);
+    border: solid 1px #6343DE;
+  }
+  .resultbox:hover {
+    box-shadow: 0px 0px 32px #6343DE;
+  }
+
+  .highlight-Search {
+    border: solid 2px #6343DE;
+    box-shadow: 0px 0px 32px #6343DE;
+}
