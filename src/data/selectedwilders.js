@@ -1,3 +1,5 @@
+// Max 5 wilders in the array please and odd number of wilders
+
 export const data = [
     {
       mail: "baptiste.save79700@gmail.com",
@@ -78,14 +80,11 @@ export const data = [
       github: "https:\/\/github.com\/Jonathan-Bernard"
      },
      {
-      mail: "lah.oceane@gmail.com",
-      lastname: "LAHOUAL",
-      firstname: "Océane",
-      age: 27,
-    objective: "Devenir Déesse de la magie",
-      hobbies: "Jeux-vidéos, musique, sport, dessin, animes\/mangas",
-      linkedin: "https:\/\/www.linkedin.com\/in\/oc%C3%A9ane-l-b6312618a\/",
-      github: "https:\/\/github.com\/Midunighto"
+      mail: "souhir_farjallah@live.fr",
+      lastname: "FARJALLAH",
+      firstname: "Souhir",
+      age: 34,
+    objective: "Reconversion en tant que Développeur Web",
      },
   ];
   

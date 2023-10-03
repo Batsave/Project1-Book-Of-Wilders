@@ -276,4 +276,11 @@ export const data = [
     linkedin: "https://www.linkedin.com/in/jonathan-bernard-250733290/",
     github: "https://github.com/Jonathan-Bernard",
   },
+  {
+    mail: "souhir_farjallah@live.fr",
+    lastname: "FARJALLAH",
+    firstname: "Souhir",
+    age: 34,
+  objective: "Reconversion en tant que Développeur Web",
+   },
 ];
