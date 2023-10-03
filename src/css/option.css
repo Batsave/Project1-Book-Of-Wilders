@@ -1,0 +1,60 @@
+.option {
+    display:none;  
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--color-primary);
+    overflow-y: none;
+  }
+    .optionUser {
+    display: flex;
+    width:90%;
+    margin: auto;
+    }
+ 
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+  
+
+  @media screen and (min-width: 950px) {
+    #keyboard { display: none; }
+}
+
+@media screen and (max-width: 949px){
+    #keyboard {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+      }
+      
+      #keyboard button {
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+        font-size: 24px;
+        border-radius: 50%;
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      
+      #keyboard button:active {
+        background-color: var(--color-purple-light);
+        color: var(--color-secondary);
+        box-shadow: none;
+    
+      } 
+}
+ 

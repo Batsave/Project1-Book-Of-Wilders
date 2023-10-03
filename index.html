@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--META DESCRIPTIONS-->
@@ -41,6 +41,7 @@
     <link href="./src/css/carrousel-button.css" rel="stylesheet">
     <link href="./src/css/dark-mode.css" rel="stylesheet">
     <link href="./src/css/search.css" rel="stylesheet">
+    <link href="./src/css/option.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
     </style>
@@ -54,7 +55,8 @@
         <a class="logo" href="https://www.bookofwilders.fr" title="Acceder à la page d'accueil"></a>
         <div class="nav-btn-section">
             <button class="searchBar opensearchPopUp" title="Ouvrir la barre de recherche"></button>
-            <label class="lightdarkmode" title="Changer le thème de la page"><input title="Changer le thème de couleur" type="checkbox" id="switch"></label>
+            <label class="lightdarkmode" title="Changer le thème de la page"><input title="Changer le thème de couleur"
+                    type="checkbox" id="switch"></label>
         </div>
     </nav>
 
@@ -228,10 +230,30 @@
         </div>
     </div>
 
+    <div class="option">
+        <div class="optionUser">
+        </div>
+        <div id="keyboard">
+            <div class="sectionkeyboard">
+                <button id="up">Up</button>
+            </div>
+            <div class="sectionkeyboard">
+                <button id="left">Left</button>
+                <button id="space">Space</button>
+                <button id="right">Right</button>
+            </div>
+            <div class="sectionkeyboard">
+                <button id="down">Down</button>
+            </div>
+          </div>
+    </div>
+
+
     <script src="./src/js/theme.js" type="module"></script>
     <script src="./src/js/search.js" type="module"></script>
     <script src="./src/js/carousel.js" type="module"></script>
     <script src="./src/js/allcardlist.js" type="module"></script>
+    <script src="./src/js/option.js" type="module"></script>
 </body>
 
 </html>
