@@ -41,11 +41,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
+
     border: var(--profil-pict-brd);
     border-radius: 100%;
     margin: auto;
 }
+
 .profil-picture::after {
     display: flex;
     width: 8rem;
@@ -185,12 +186,13 @@
 
 /*  Background Cards Settings   */
 
-@media screen and (min-width: 300px){
+@media screen and (min-width: 300px) {
     .card-blur {
-    filter: blur(3px);
-    --moz-filter: blur(3px);
-    --webkit-filter: blur(3px);
+        filter: blur(3px);
+        --moz-filter: blur(3px);
+        --webkit-filter: blur(3px);
     }
+
     .card {
         display: flex;
         flex-direction: column;
@@ -205,17 +207,18 @@
         margin: auto;
         transition: all 0.3s ease-in-out;
         box-shadow: none;
-       
-    
+
+
     }
 }
-@media screen and (max-width: 299px){
+
+@media screen and (max-width: 299px) {
     .card-blur {
         filter: blur(3px);
         --moz-filter: blur(3px);
         --webkit-filter: blur(3px);
-        }
-       
+    }
+
     .card {
         display: flex;
         flex-direction: column;
@@ -232,4 +235,3 @@
         border: solid 1px #6343DE;
     }
 }
-
