@@ -303,7 +303,6 @@ spaceButton.addEventListener("touchstart", function(event) {
       e = e || event; // to deal with IE
       map[e.keyCode] = e.type == 'keydown';
       let newDirection;
-      console.log(map);
       if(map[37]){
         newDirection = "left";
       } else if(map[38]){
