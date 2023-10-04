@@ -1,0 +1,21 @@
+{
+    "name": "Book Of Wilders",
+    "short_name": "Book Of Wilders",
+    "description": "Recrutez un Wilders n'a jamais été aussi facile.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#101010",
+    "theme_color": "#101010",
+    "icons": [
+      {
+        "src": "../png/logo-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "../png/logo-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

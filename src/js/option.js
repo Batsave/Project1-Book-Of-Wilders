@@ -272,6 +272,7 @@ upButton.addEventListener("touchstart", function(event) {
   event.preventDefault();
   let newDirection = "up";
   snakee.setDirection(newDirection);
+  
 });
 
 leftButton.addEventListener("touchstart", function(event) {
@@ -295,6 +296,7 @@ downButton.addEventListener("touchstart", function(event) {
 spaceButton.addEventListener("touchstart", function(event) {
   event.preventDefault();
   launch();
+  
 });
 
   
