@@ -52,7 +52,7 @@ function performSearch() {
   searchResults.innerHTML = suggestions;
 
   if (resultat == "") {
-    searchResults.innerHTML = ` <a class="WilderResult">Aucun Wilders ne correspond à votre recherche</a>`;
+    searchResults.innerHTML = ` <a class="noWilderResult">Aucun Wilders ne correspond à votre recherche</a>`;
   }
 
   document.querySelectorAll(".resultbox").forEach((link) => {

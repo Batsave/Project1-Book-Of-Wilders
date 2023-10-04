@@ -41,6 +41,21 @@
     border-radius: 0.8rem;
     
   }
+
+  .noWilderResult {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-familly);
+    color: var(--color-white);
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    height: fit-content;
+    margin: 0 auto;
+    border-radius: 0.8rem;
+    
+  }
   
   .btn-close {
     cursor: pointer;
