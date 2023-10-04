@@ -2,7 +2,7 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/src/js/pwa.js")
-      .then((registration) => {
+      .then(() => {
         console.log("Service Worker enregistré avec succès:");
       })
       .catch((error) => {
