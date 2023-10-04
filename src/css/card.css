@@ -15,7 +15,7 @@
 
 .highlight {
     border: solid 2px #6343DE;
-    animation: boxshadow 5s infinite;
+    box-shadow: 0px 0px 32px #6343DE;
 }
 
 @keyframes boxshadow {

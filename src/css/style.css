@@ -10,14 +10,14 @@
 ::-webkit-scrollbar {
     width: 0;
     display: none;
-    
+
 }
 
 body {
     display: flex;
     flex-direction: column;
     background-color: var(--color-background);
-    
+
 
 }
 
@@ -56,8 +56,8 @@ nav {
     background: url(../svg/searchbutton.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.6rem;
+    height: 2.6rem;
     cursor: pointer;
     border: none;
     filter: var(--ico-invert-color);
@@ -79,8 +79,8 @@ nav {
     background: var(--ico-theme-std);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.6rem;
+    height: 2.6rem;
     cursor: pointer;
     border: none;
     filter: var(--ico-invert-color);
@@ -187,6 +187,7 @@ header {
         width: 90%;
         margin: auto;
     }
+
     .aboutPicture {
         display: flex;
         min-width: 70ch;
@@ -194,9 +195,9 @@ header {
         background-image: url(../webp/about-picture.webp);
         background-size: contain;
         background-position: right;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
     }
-    
+
     .aboutText {
         display: flex;
         flex-direction: column;
@@ -207,7 +208,7 @@ header {
         font-weight: 100;
         font-size: 1rem;
         line-height: 1.5rem;
-        color: var(--color-white);   
+        color: var(--color-white);
     }
 }
 
@@ -221,6 +222,7 @@ header {
         margin: auto;
         margin-bottom: 2rem;
     }
+
     .aboutPicture {
         display: flex;
         max-width: 100%;
@@ -230,30 +232,31 @@ header {
         background-size: contain;
         background-position: right;
         background-repeat: no-repeat;
-        
+
     }
-    
+
     .aboutText {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 90%;
-        
+
         gap: 2rem;
         font-family: var(--font-familly);
         font-weight: 100;
         font-size: 1rem;
         line-height: 1.5rem;
-        color: var(--color-white);    
-    
+        color: var(--color-white);
+
     }
 }
-    
+
 
 .about {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border: none;
 }
 
 .about-content {
@@ -261,6 +264,7 @@ header {
     flex-direction: row;
     width: 100%;
     background-color: var(--color-purple);
+    border: none;
 
 }
 
@@ -295,6 +299,7 @@ footer {
 
 .svg-transition {
     display: flex;
+    border: none;
 }
 
 .footer-section {
@@ -315,8 +320,9 @@ footer {
     min-width: 200px;
     max-width: 300px;
     content: url(/src/svg/logo-bookofwilders.svg);
-    
+
 }
+
 .footer-logo:hover {
     transform: scale(0.9);
 }
@@ -373,6 +379,7 @@ ul {
     text-decoration: none;
     list-style-type: none;
 }
+
 #game {
     display: flex;
     width: 100%;
