@@ -51,9 +51,10 @@ function performSearch() {
 
   searchResults.innerHTML = suggestions;
 
-  if (input === "") {
-    searchResults.innerHTML = "";
+  if (resultat == "") {
+    searchResults.innerHTML = ` <a class="WilderResult">Aucun Wilders ne correspond à votre recherche</a>`;
   }
+
   document.querySelectorAll(".resultbox").forEach((link) => {
     link.addEventListener("click", () => {
         handleAnchorChange();
