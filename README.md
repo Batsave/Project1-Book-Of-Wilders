@@ -14,7 +14,8 @@ Join us on this adventure and discover the unlimited potential of Wilders. Your 
 
 <br>
 <br>
- 
+
+
 ### 💡 Concept Design :
 We wanted to create an innovative and stylish website. the objective was to simplify navigation on mobile and PC by giving the user the choice of how they wish to view the profiles.
 
@@ -45,6 +46,11 @@ This site is a prototype exercise designed and developed by: [Batsave](https://g
 <br>
 <br>
 <br>
+
+### Discover the project :
+
+[Book-Of-Wilders-Discover-the-project.webm](https://github.com/Batsave/Project1-Book-Of-Wilders/assets/111178330/918e1b38-61a8-40f1-aa84-20f9f6ca17a7)
+
 
 ## UI/UX Design
 ![Book Of Wilders - UI/UX Design](https://github.com/batsave/Project1-Book-Of-Wilders/blob/main/mockup/BookOfWilders-UIUXDesign.png?raw=true)
